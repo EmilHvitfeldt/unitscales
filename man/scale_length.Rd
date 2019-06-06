@@ -9,13 +9,13 @@ scale_x_length(name = waiver(), breaks = waiver(),
   minor_breaks = waiver(), labels = waiver(), limits = NULL,
   expand = waiver(), oob = censor, na.value = NA_real_,
   position = "bottom", sec.axis = waiver(), base = "metre",
-  system = "metric")
+  system = "metric", ignore = NULL)
 
 scale_y_length(name = waiver(), breaks = waiver(),
   minor_breaks = waiver(), labels = waiver(), limits = NULL,
   expand = waiver(), oob = censor, na.value = NA_real_,
   position = "left", sec.axis = waiver(), base = "metre",
-  system = "metric")
+  system = "metric", ignore = NULL)
 }
 \arguments{
 \item{name}{The name of the scale. Used as the axis or legend title. If
@@ -76,6 +76,8 @@ scales, "top" or "bottom" for horizontal scales}
 
 \item{system}{Character, dertermine what measurement system to use is,
 defaults to "metric".}
+
+\item{ignore}{Character, which units to ignore.}
 }
 \description{
 This scale allow for easy labeling of data in distance measurements.

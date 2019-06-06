@@ -4,7 +4,7 @@
 \alias{wrapper_scaler}
 \title{Internal Functions}
 \usage{
-wrapper_scaler(x, scaler, base, system)
+wrapper_scaler(x, scaler, base, system, ignore)
 }
 \description{
 These are not to be used directly by the users.

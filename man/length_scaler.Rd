@@ -4,7 +4,7 @@
 \alias{length_scaler}
 \title{Internal Functions}
 \usage{
-length_scaler(x, base, system)
+length_scaler(x, base, system, ignore)
 }
 \description{
 These are not to be used directly by the users.

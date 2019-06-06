@@ -42,7 +42,8 @@ library(unitscales)
 ``` r
 ggplot(women, aes(weight, height)) +
   geom_point() +
+  scale_y_length(base = "inch", system = "imperial", ignore = "yard") +
   scale_x_mass(base = "pound", system = "imperial")
 ```
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" /> q

@@ -4,7 +4,7 @@
 \alias{mass_scaler}
 \title{Internal Functions}
 \usage{
-mass_scaler(x, base, system)
+mass_scaler(x, base, system, ignore)
 }
 \description{
 These are not to be used directly by the users.

@@ -28,6 +28,7 @@
 #' @param base Character, dertermine what the base unit is, defaults to "metre".
 #' @param system Character, dertermine what measurement system to use is,
 #'     defaults to "metric".
+#' @param ignore Character, which units to ignore.
 #' @family position scales
 #' @examples
 #' library(ggplot2)
@@ -70,9 +71,10 @@ scale_x_length <- function (name = waiver(), breaks = waiver(),
                           limits = NULL, expand = waiver(), oob = censor,
                           na.value = NA_real_, position = "bottom",
                           sec.axis = waiver(), base = "metre",
-                          system = "metric") {
+                          system = "metric", ignore = NULL) {
 
-  label_fun <- wrapper_scaler(scaler = length_scaler, base = base, system = system)
+  label_fun <- wrapper_scaler(scaler = length_scaler, base = base, system = system,
+                              ignore = ignore)
 
   ggplot2::scale_x_continuous(
     name = name, breaks = breaks, labels = label_fun,
@@ -91,9 +93,10 @@ scale_y_length <- function (name = waiver(), breaks = waiver(),
                           limits = NULL, expand = waiver(), oob = censor,
                           na.value = NA_real_, position = "left",
                           sec.axis = waiver(), base = "metre",
-                          system = "metric") {
+                          system = "metric", ignore = NULL) {
 
-  label_fun <- wrapper_scaler(scaler = length_scaler, base = base, system = system)
+  label_fun <- wrapper_scaler(scaler = length_scaler, base = base, system = system,
+                              ignore = ignore)
 
   ggplot2::scale_y_continuous(
     name = name, breaks = breaks, labels = label_fun,
@@ -108,14 +111,14 @@ scale_y_length <- function (name = waiver(), breaks = waiver(),
 #' These are not to be used directly by the users.
 #' @export
 #' @keywords internal
-length_scaler <- function(x, base, system) {
+length_scaler <- function(x, base, system, ignore) {
   if (is.na(x)) {
     return(NA_character_)
   }
   if (x == 0) {
     return("0")
   }
-  convert_scale(x, base, system, length_table, length_convertion)
+  convert_scale(x, base, system, length_table, length_convertion, ignore)
 }
 
 #' @importFrom tibble tribble
