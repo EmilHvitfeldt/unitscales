@@ -5,6 +5,10 @@
 
 <!-- badges: start -->
 
+[![Travis build
+status](https://travis-ci.org/EmilHvitfeldt/unitscales.svg?branch=master)](https://travis-ci.org/EmilHvitfeldt/unitscales)
+[![Codecov test
+coverage](https://codecov.io/gh/EmilHvitfeldt/unitscales/branch/master/graph/badge.svg)](https://codecov.io/gh/EmilHvitfeldt/unitscales?branch=master)
 <!-- badges: end -->
 
 The goal of unitscales is to add commonly used scale transformation to
@@ -36,6 +40,11 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(ggplot2)
+#> Registered S3 methods overwritten by 'ggplot2':
+#>   method         from 
+#>   [.quosures     rlang
+#>   c.quosures     rlang
+#>   print.quosures rlang
 library(unitscales)
 ```
 

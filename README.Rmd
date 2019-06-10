@@ -15,6 +15,8 @@ knitr::opts_chunk$set(
 # unitscales
 
 <!-- badges: start -->
+[![Travis build status](https://travis-ci.org/EmilHvitfeldt/unitscales.svg?branch=master)](https://travis-ci.org/EmilHvitfeldt/unitscales)
+[![Codecov test coverage](https://codecov.io/gh/EmilHvitfeldt/unitscales/branch/master/graph/badge.svg)](https://codecov.io/gh/EmilHvitfeldt/unitscales?branch=master)
 <!-- badges: end -->
 
 The goal of unitscales is to add commonly used scale transformation to [ggplot2](https://ggplot2.tidyverse.org/).
